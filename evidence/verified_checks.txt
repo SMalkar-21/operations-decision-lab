@@ -1,0 +1,16 @@
+RAW 78,072 | ACCEPTED 78,000 | QUARANTINED 72
+  duplicate_contact_id: 25
+  negative_workload: 20
+  missing_issue_type: 15
+  invalid_csat: 12
+PASS: all planted data-quality errors identified
+PASS | Raw to clean row counts | 78,072 source; 78,000 curated
+PASS | Quarantine exception count | 72 planted exceptions
+PASS | Unique curated contact IDs | No duplicate IDs in curated data
+PASS | Governed SLA denominator | 85.37% across all valid contacts
+PASS | Billing/Email cohort SQL-equivalent | 1,827 contacts; 662 breached
+PASS | 25% what-if arithmetic | 166 hypothetical avoided; +0.21 pp over full period
+PASS | Extended data end-month | June 2025 through August 2026
+PASS | Zero-recovery scenario control | 0% recovery produces no uplift
+PASS | Mix decomposition reconciliation | -5.379 pp within + -0.019 pp mix = -5.397 pp
+RESULT: 9/9 automated dataset checks passed

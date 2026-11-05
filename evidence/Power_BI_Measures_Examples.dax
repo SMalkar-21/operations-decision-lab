@@ -1,0 +1,21 @@
+// Demonstration measures to recreate the KPIs in Power BI.
+// Import clean_contacts_SYNTHETIC.csv as 'Contacts'. These are not
+// extracted from a real Power BI .pbix file.
+
+Contact Count = COUNTROWS('Contacts')
+SLA Met = SUM('Contacts'[sla_met])
+SLA Compliance = DIVIDE([SLA Met], [Contact Count])
+FCR = DIVIDE(SUM('Contacts'[first_contact_resolved]),[Contact Count])
+Escalation Rate = DIVIDE(SUM('Contacts'[escalated]),[Contact Count])
+Surveyed Contacts = COUNT('Contacts'[csat_score])
+Positive CSAT = CALCULATE(COUNTROWS('Contacts'), 'Contacts'[csat_score] >= 4)
+CSAT Positive % = DIVIDE([Positive CSAT], [Surveyed Contacts])
+Breaches = [Contact Count] - [SLA Met]
+AHT (Minutes) = AVERAGE('Contacts'[handle_minutes])
+
+// Hypothetical intervention measure: make a disconnected
+// parameter table 'Recovery Rate' with column [Value] in [0,1].
+Targeted Breaches (Late Billing Email) =
+CALCULATE([Breaches], 'Contacts'[team]="Billing", 'Contacts'[channel]="Email", 'Contacts'[month]>="2026-01", 'Contacts'[month]<="2026-03")
+Potential Avoided Breaches = ROUND([Targeted Breaches (Late Billing Email)] * SELECTEDVALUE('Recovery Rate'[Value],0.25),0)
+Simulated SLA = DIVIDE([SLA Met]+[Potential Avoided Breaches],[Contact Count])

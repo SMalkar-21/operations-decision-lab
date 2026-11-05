@@ -1,0 +1,19 @@
+INTERACTIVE OPERATIONS DECISION LAB — DOWNLOADS FIXED
+
+1. Extract the entire Website ZIP. (Do not open index.html while inside the ZIP.)
+2. Open index.html in Chrome, Edge, or Firefox.
+3. Select "Download 9-page PDF" to save the PDF. A copy of the PDF is embedded in
+   index.html as a fallback even if index.html is separated from the other files.
+4. Select "Open PDF" to view the PDF in a new tab and save manually if needed.
+5. Select "Download project evidence" to save technical_evidence.zip. That ZIP
+   must stay next to index.html, or be deployed alongside it on GitHub Pages.
+6. To publish on GitHub Pages: upload ALL CONTENTS of this extracted folder to
+   your repository root (including index.html, portfolio.pdf, technical_evidence.zip,
+   evidence/, data/, technical/). Enable Settings > Pages > Deploy from a branch >
+   main > /(root).
+7. Open the actual GitHub Pages website, not github.com/.../blob/main/index.html.
+   The GitHub repository code preview is not an interactive website.
+8. If visiting in ChatGPT's preview, download and open the website ZIP locally.
+
+Self-directed portfolio; data is 100% synthetic. Reporting window June 2025–August 2026.
+The HTML dashboard is not a native Power BI .pbix file.

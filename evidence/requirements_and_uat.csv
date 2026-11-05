@@ -1,0 +1,8 @@
+Requirement ID,Stakeholder need,Acceptance criterion,Test ID,Test procedure,Expected result,Test type
+REQ-01,Exclude invalid landing rows,72 deliberately planted errors are rejected,UAT-01,Run validate_and_reconcile.py,78000 valid and 72 quarantined,Data quality
+REQ-02,Consistent KPI definitions,Filter aggregates reconcile to valid contacts,UAT-02,Compare all-month HTML totals with CSV totals,78000 total and correct SLA denominator,KPI reconciliation
+REQ-03,Explain period SLA changes,Within plus mix effects equals net SLA change,UAT-03,Calculate two-period Kitagawa decomposition,Components sum to observed SLA delta,Analysis validity
+REQ-04,Rank operational issues,Breach counts and SLA rates presented by queue,UAT-04,Compare segment chart with SQL query,Ranks equal aggregate breach counts,Stakeholder acceptance
+REQ-05,Quantify scenario effects,Zero percent recovery leaves baseline unchanged,UAT-05,Set recovery slider to zero,No change in simulated SLA,Functional test
+REQ-06,Ensure scenario is transparent,No causal or production claim is made,UAT-06,Inspect PDF and dashboard disclaimer,Prominent synthetic-data and assumption labels,Governance
+REQ-07,Filter-consistent scenario arithmetic,Scenario uses the same filtered cohort as KPI cards,UAT-07,Filter period to late and set recovery to 25%,Avoided cases equals 25 percent rounded of targeted breaches,Functional test
