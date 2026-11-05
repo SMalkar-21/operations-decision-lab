@@ -1,14 +1,12 @@
-# Operations Decision Lab | June 2025–August 2026 (synthetic period)
+# Operations Decision Lab — Business Analysis & Business Intelligence
 
-This portfolio simulates 15 months of customer operations. The **project was revised in November 2026**; the dates refer to fictional interactions, not the project completion date.
+Interactive **HTML/JavaScript** analytics dashboard based entirely on synthetic customer-operations data (June 2025–August 2026 simulated reporting period).
 
-- Open `index.html` in a browser, or upload the contents of this folder to the root of a GitHub Pages repository.
-- `portfolio.pdf` is the matching nine-page LinkedIn portfolio.
-- `data/clean_contacts_SYNTHETIC.csv` has 78,000 fictional interactions.
-- `data/raw_contacts_WITH_PLANTED_ERRORS.csv` has 78,072 records including 72 deliberate defects.
-- `technical/dashboard_mart.json` is the 360-group summary embedded into the offline dashboard.
-- Run `python evidence/validate_and_reconcile.py` and `python evidence/test_portfolio_evidence.py` to verify the generated data.
-- The model AUC 0.66 is from the original Jun 2025–Mar 2026 synthetic historical subset, NOT a new model evaluation including Apr–Aug 2026.
-- The dashboard uses HTML and JavaScript; it is not a native Power BI report. Example DAX measures are supplied.
+## View the portfolio
+- Open `index.html` locally in a browser, or host this repository through GitHub Pages.
+- Download/open the nine-page case study from the website footer.
+- The reproducibility checks are embedded on the page.
+- The optional Power BI Desktop **build kit** is in `powerbi/PowerBI_Build_Kit.zip` and its design previews in `powerbi/`. It is **not** yet a `.pbix` report.
 
-No confidential business or real customer data. Nothing in the scenario represents a realised pilot, employer outcome, or a project completed in the 2025–2026 reporting interval.
+## Publishing updates
+Keep using the **same GitHub repository and Pages URL**. Replace `index.html`, add the `powerbi` folder, commit and push. If your site is already published from `main` and `/(root)`, you do not need to configure Pages again.
